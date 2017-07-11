@@ -12,7 +12,7 @@ export default class Home extends Component {
   };
 	constructor(props) {
 		super(props);
-		this.state = { text: 'socer', value:2 };
+		this.state = { text: 'football', value:2 };
 	}
 
 	render() {
@@ -20,22 +20,18 @@ export default class Home extends Component {
 		return (
 			<View style={styles.container}>
 				<View style={styles.row}>
-					<Text style={styles.welcome}>Search term</Text>
-					<TextInput
-					 style={{
-						 height: 40,
-						 width: `${50}%`,
-						 textAlign:'center'
-					 }}
+					<Text style={styles.label}>Search term</Text>
+					<TextInput style={styles.input}
 					 onChangeText={(text) => this.setState({...this.state, text})}
 					 value={this.state.text}
 				 />
 			 </View>
 				 <View style={styles.row}>
-					 <Text style={styles.welcome}>Columns</Text>
+					 <Text style={styles.label}>Columns</Text>
 					 <Slider
 						style={{width: `${55}%`,}}
 						maximumValue={4}
+						minimumValue={1}
 						maximumTrackTintColor={'#dc143c'}
 						step={1}
 						value={this.state.value}
@@ -47,8 +43,7 @@ export default class Home extends Component {
 					<Button
 						onPress={() => navigate('Result', { text:this.state.text, value: this.state.value })}
 						title="SEARCH"
-						color="#008b8b"
-					/>
+						color="#008b8b" />
 				</View>
 			</View>
 		);
@@ -67,8 +62,14 @@ const styles = StyleSheet.create({
 		justifyContent: 'space-around',
 		marginBottom:10,
 	},
-	welcome: {
+	label: {
 		fontSize: 14,
 		margin: 5,
 	},
+	input:{
+		height: 40,
+		width: `${50}%`,
+		textAlign:'center'
+
+	}
 });
