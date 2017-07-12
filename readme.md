@@ -1,4 +1,6 @@
-	![alt](home.png) ![alt](result.png)
+## Search of Images App
+	![alt](home.png)
+	![alt](result.png)
 
 ## Getting started
 1. git clone git@github.com:kleyos/React-Native-SearchImage-App.git
