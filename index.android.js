@@ -12,9 +12,9 @@
 	import Result from './src/components/result'
 
 	const SearchImages = StackNavigator({
-	  Home: { screen: Home },
-	  Result: { screen: Result },
-	});
+		Home: { screen: Home },
+		Result: { screen: Result},
+	})
 
 
 	AppRegistry.registerComponent('SearchImages', () => SearchImages)

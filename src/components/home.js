@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import {
 	AppRegistry,
 	StyleSheet, Text, Button,
-	View, FlatList, Slider, TextInput
+	View, Slider, TextInput
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
 
 export default class Home extends Component {
 	static navigationOptions = {
-    title: 'Search',
-  };
+		title: 'Search',
+	};
 	constructor(props) {
 		super(props);
 		this.state = { text: 'football', value:2 };

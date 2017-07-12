@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import {
-	AppRegistry,
-	StyleSheet, Text, Button, ScrollView, Image,
+	StyleSheet, ScrollView, Image, Text,
 	View, Dimensions,} from 'react-native'
-import { StackNavigator } from 'react-navigation'
 
 export default class Result extends Component {
 	static navigationOptions = ({ navigation }) => ({
@@ -37,11 +35,11 @@ export default class Result extends Component {
 						height: img.previewHeight/params.value,
 						margin:5,
 					}} /> )
-			: false
+			: <Text> No result </Text>
 
 		return <View style={styles.container}>
 			<ScrollView contentContainerStyle={styles.pictures}>
-				{pictures.length>0 ? pictures : <Text>No results</Text>}
+				{pictures}
 			</ScrollView>
 		</View>
 		}
